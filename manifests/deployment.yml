@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: devopstranningkusalpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopstranningkusalpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: devopstranningkusalpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: devopstranningkusalpipelinesjavascriptdocker 
+          image: kp100reg.azurecr.io/devopstranningkusalpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
